@@ -7,7 +7,12 @@ public class Principal {
 		System.out.println("isso é o método main");
 		
 		
-		Thread.sleep(60000);
+		Runnable tarefa = new TarefaImprimeString();
+		Thread threadImprimeString = new Thread(tarefa, "Tarefa Imprime String");
+		
+		threadImprimeString.start();
+		
+		
 	}
 
 }
