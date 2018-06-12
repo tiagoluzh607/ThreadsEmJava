@@ -15,13 +15,7 @@ public class TarefaAdicionarElemento implements Runnable {
 	@Override
 	public void run() {
 		
-		for (int i = 0; i < 100000; i++) {
-			try {
-				Thread.currentThread().sleep(2);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		for (int i = 0; i < 1000; i++) {
 			lista.add("Thread " + numeroDoThread + " - " + i);
 		}
 
