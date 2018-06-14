@@ -10,7 +10,7 @@ public class Lista {
 			this.elementos[indice] = elemento;
 			this.indice++;
 			
-			demoraUmPouco(10);
+			//demoraUmPouco(10);
 		
 			if(this.indice == this.elementos.length) {
 				System.out.println("lista tá cheia, notificando");
@@ -33,6 +33,11 @@ public class Lista {
 	
 	public String pegaElemento(int posicao) {
 		return this.elementos[posicao];
+	}
+
+	public boolean estacheia() {
+		
+		return this.indice == this.tamanho();
 	}
 	
 }
