@@ -9,7 +9,18 @@ public class Lista {
 	public synchronized void adicionaElementos(String elemento) {
 			this.elementos[indice] = elemento;
 			this.indice++;
+			
+			demoraUmPouco(10);
 		
+	}
+
+	private void demoraUmPouco(long millis) {
+		try {
+			Thread.sleep(millis);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public int tamanho() {
