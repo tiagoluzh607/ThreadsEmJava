@@ -11,7 +11,8 @@ public class Principal {
 		
 		//List<String> lista = new ArrayList(); //não é sincronizado
 		//List<String> lista = Collections.synchronizedList(new ArrayList<String>()); //é sincronizado
-		List<String> lista = new Vector<String>(); //é sincronizado
+		//List<String> lista = new Vector<String>(); //é sincronizado
+		Lista lista = new Lista();
 		
 		for (int i = 0; i < 10; i++) {
 			
@@ -21,8 +22,8 @@ public class Principal {
 		
 		Thread.sleep(2000);
 		
-		for (int i = 0; i < lista.size(); i++) {
-			System.out.println(i + " - " + lista.get(i));
+		for (int i = 0; i < lista.tamanho(); i++) {
+			System.out.println(i + " - " + lista.pegaElemento(i));
 		}
 
 	}
