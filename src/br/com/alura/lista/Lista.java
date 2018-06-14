@@ -3,7 +3,7 @@ package br.com.alura.lista;
 public class Lista {
 
 	
-	private String[] elementos = new String[10000];
+	private String[] elementos = new String[1000];
 	private int indice = 0;
 	
 	public synchronized void adicionaElementos(String elemento) {
@@ -12,6 +12,10 @@ public class Lista {
 			
 			demoraUmPouco(10);
 		
+			if(this.indice == this.elementos.length) {
+				System.out.println("lista tá cheia, notificando");
+				this.notify();
+			}
 	}
 
 	private void demoraUmPouco(long millis) {
